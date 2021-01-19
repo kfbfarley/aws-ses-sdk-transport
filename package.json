@@ -1,0 +1,32 @@
+{
+  "name": "@kfbfarley/aws-ses-sdk-transport",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "version": "1.0.1",
+  "description": "Node.js package for AWS Simple Email Service Transport Mailer",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kfbfarley/aws-ses-sdk-transport.git"
+  },
+  "keywords": [
+    "aws",
+    "ses",
+    "mailer",
+    "aws ses",
+    "node",
+    "javascript"
+  ],
+  "author": "@kfbfarley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kfbfarley/aws-ses-sdk-transport/issues"
+  },
+  "homepage": "https://github.com/kfbfarley/aws-ses-sdk-transport#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "handlebars": "^4.7.6",
+    "nodemailer": "^6.4.17"
+  }
+}
