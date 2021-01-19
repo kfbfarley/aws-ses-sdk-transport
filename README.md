@@ -1,5 +1,5 @@
 <h1 align="center">
-      <br>A full JavaScript Node.js compatible AWS SES mailer using nodemailer transport
+      <br>A full JavaScript Node.js compatible AWS SES Mailer
   <br/>
 </h1>
 
@@ -12,15 +12,25 @@ A quick and useful JavaScript application to send emails from your Node.js serve
 You may use Windows, macOS, or Linux as your development operating system and the following tools:
 
 -  [Node.js](https://nodejs.org/en/download/)
+-  [Amazon Web Services Simple Email Service](https://aws.amazon.com/ses/)
+
+> Remind: This package was only tested with AWS SES credentials and doesn't support common SMTP connections yet.
 
 ## 🚀 Technologies
 
 This project was built using the following technologies:
 
--  [Node.js](https://nodejs.org/)
 -  [Nodemailer](https://nodemailer.com/about/)
 -  [Handlebars](https://handlebarsjs.com/)
 -  [Node.js fs](https://nodejs.org/api/fs.html)
+
+## 🏁 Compatibility
+
+This package is compatible with the following templates design:
+
+-  [HTML](https://nodejs.org/en/download/) ✔️
+-  [TEXT](https://nodejs.org/en/download/) ✔️
+-  [MJML](https://nodejs.org/en/download/) ❗ (working on it)
 
 ## 🔎 Preview
 
