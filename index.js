@@ -13,7 +13,7 @@ module.exports = () =>{
     let transporter = nodemailer.createTransport({
         host: config.SES.SERVER,
         port: config.SES.PORT,
-        secure: true,
+        secure: false,
         auth: {
           user: config.SES.KEY,
           pass: config.SES.SECRET
@@ -32,6 +32,11 @@ module.exports = () =>{
             return await transporter.sendMail({
                 from: config.SES.FROM,
                 to: receiver.email,
+                headers: {
+                    "x-priority": receiver.priority ? 1: 5,
+                    "x-msmail-priority": receiver.priority ? "High" : "Low",
+                    importance: receiver.priority ? "high" : "low"
+                },
                 subject: receiver.subject,
                 html: handlebars.compile(fs.readFileSync(path.resolve(config.SES.DIR+template.type, (template.name+'.'+template.type)), config.SES.CHARSET))(receiver)
             });

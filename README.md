@@ -87,18 +87,37 @@ If you want to send an email using Amazon Web Service Simple Email Service crede
 ```
 const ses = require("@kfbfarley/aws-ses-sdk-transport")();
 
-const send = ses.Send({
-        name: "confirm", //template name without extension
-        type: "html" //template type
-    },{
-        email: "doe@example.com",
-        subject: "Olá Jonh Doe!",
-        first_name: "Jonh",
-        url: "https://example.com/enable",
-        url_disable: "https://example.com/disable"
-    }
+ses.Send({
+    name: "confirm",
+    type: "html"
+        },{
+            email: "doe@example.com",
+            subject: "Hey, Jonh Doe!",
+            priority: true,
+            first_name: "Jonh",
+            url: "https://example.com/enable",
+            url_disable: "https://example.com/disable"
+        }
 );
 ```
+## 💬 How to prevent emails going to spam folder?
+
+After the receiver's ISP accpets the email, the ISP decides wheater the email is categorized as span and determines the overall mailbox placement.
+
+There are several factors that can lead to an ISP flagging an email as span, such as:
+
+- The email content and quality: insecure links, links considered harmful, specific keywords, links to domains that aren't the sending domain
+
+- DKIM or SPF authentication not provided
+
+- IP address reputation
+
+- Multiple emails flagged as spam will put your domain's email into the *sandbox*
+
+- High bounce or complaint rates
+
+> Setting Up Easy DKIM for a AWS SES domain available [here](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-authentication-dkim-easy-setup-domain.html).
+
 
 ## 👍 Contributing
 
