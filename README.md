@@ -48,7 +48,7 @@ To add this package to your project, simply execute the following command:
 > Remind: You must be on your project root directory
 
 ```
-$ npm install @kfbfarley/aws-ses-sdk-transport@1.0.1
+$ npm install @kfbfarley/aws-ses-sdk-transport@1.0.3
 ```
 
 After installing the package you have to set your environment variables on your .env file located on your root directory
