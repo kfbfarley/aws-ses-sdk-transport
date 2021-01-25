@@ -93,7 +93,7 @@ ses.Send({
         },{
             email: "doe@example.com",
             subject: "Hey, Jonh Doe!",
-            priority: true,
+            priority: true, // remove to set to normal
             first_name: "Jonh",
             url: "https://example.com/enable",
             url_disable: "https://example.com/disable"
