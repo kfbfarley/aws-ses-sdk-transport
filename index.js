@@ -34,8 +34,8 @@ module.exports = () =>{
                 to: receiver.email,
                 headers: {
                     "x-priority": receiver.priority ? 1: 5,
-                    "x-msmail-priority": receiver.priority ? "High" : "Low",
-                    importance: receiver.priority ? "high" : "low"
+                    "x-msmail-priority": receiver.priority ? "High" : "Low" ? !receiver.priority : "normal",
+                    importance: receiver.priority ? "high" : "low" ? !receiver.priority : "normal"
                 },
                 subject: receiver.subject,
                 html: handlebars.compile(fs.readFileSync(path.resolve(config.SES.DIR+template.type, (template.name+'.'+template.type)), config.SES.CHARSET))(receiver)
